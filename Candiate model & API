@@ -1,0 +1,8 @@
+class Candidate(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField(unique=True)
+    resume = models.FileField(upload_to="resumes/")
+    applied_jobs = models.ManyToManyField(Job, related_name="candidates")
+
+    def __str__(self):
+        return self.name
