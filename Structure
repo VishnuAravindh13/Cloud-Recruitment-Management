@@ -1,0 +1,23 @@
+recruitment_system/
+│── manage.py
+│── Dockerfile
+│── requirements.txt
+│── .env
+│── Jenkinsfile
+│── README.md
+│── config/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│── jobs/
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   ├── urls.py
+│── candidates/
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   ├── urls.py
+│── templates/
+│── static/
