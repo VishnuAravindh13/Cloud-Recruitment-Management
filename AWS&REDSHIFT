@@ -1,0 +1,20 @@
+import os
+import boto3
+
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = "your-s3-bucket-name"
+
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+# Redshift Database Configuration
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "your_redshift_db",
+        "USER": "your_redshift_user",
+        "PASSWORD": "your_redshift_password",
+        "HOST": "your-redshift-cluster.us-east-1.redshift.amazonaws.com",
+        "PORT": "5439",
+    }
+}
